@@ -12,10 +12,16 @@ namespace CleanArchMvc.Domain.Entities
             ValidateDomain(name);
         }
 
+        public void Update(string name)
+        {
+            ValidateDomain(name);
+        }
+
         public Category(int id, string name)
         {
+            DomainExceptionValidation.When(id < 0, "Invalid Id! Cannot be 0 or less!");
             Id = id;
-            Name = name;
+            ValidateDomain(name);
         }
 
         public ICollection<Product> Products { get; set; }
