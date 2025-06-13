@@ -42,7 +42,7 @@ namespace CleanArchMvc.Infra.Data.Identity
             return category;
         }
 
-        public async Task<Category> Update(Category category)
+        public async Task<Category> Update(Category category)   
         {
                 _context.Categories.Update(category);
             await _context.SaveChangesAsync();
