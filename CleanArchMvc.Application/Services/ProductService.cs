@@ -12,7 +12,7 @@ namespace CleanArchMvc.Application.Services
 {
     public class ProductService : IProductService
     {
-       private IProductRepository _productRepository;
+        private IProductRepository _productRepository;
         private IMapper _mapper;
         public ProductService(IProductRepository productRepository, IMapper mapper)
         {
